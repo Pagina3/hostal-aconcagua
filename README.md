@@ -19,8 +19,8 @@ Sitio web oficial interactivo, moderno y adaptado para celulares de **Hostal & R
   - Fichas detalladas con fotografías reales de cada habitación: Suite Standard, Doble Suite, Doble Económica y Single Económica.
   - Lista de servicios incluidos (WiFi Fibra Óptica, Baño Privado, Desayuno Campestre incluido, Smart TV, Calefacción).
   - Cotizador y reserva con 1 clic hacia WhatsApp.
-- **Experiencia Tinaja Caliente (Hot Tub):**
-  - Muestra de la tinaja rústica de madera temperada a leña en la terraza privada rodeada de vegetación.
+- **Terraza & Patio Interior Verde:**
+  - Espacio al aire libre rodeado de vegetación natural y luces cálidas para disfrutar del almuerzo, cena, coctelería o café.
 - **Ubicación & Cómo Llegar:**
   - Mapa interactivo de Google Maps con marcador exacto en Esmeralda #173, La Ligua.
   - Enlaces directos a Google Maps App y Waze con navegación GPS inmediata.

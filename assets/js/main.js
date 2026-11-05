@@ -383,35 +383,12 @@ function initReservationForm() {
             </select>
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1">¿Desea incluir Tinaja Caliente?</label>
-            <select id="res-hot-tub" class="w-full bg-[#0D1C2D] border border-[#1E3854] rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
-              <option value="Sí, deseo consultar valor con Tinaja Caliente">Sí, me gustaría incluir Tinaja Caliente</option>
-              <option value="Solo Hospedaje y Desayuno">Solo Hospedaje y Desayuno</option>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">¿Requiere Estacionamiento?</label>
+            <select id="res-parking" class="w-full bg-[#0D1C2D] border border-[#1E3854] rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
+              <option value="Sí, requiero espacio para vehículo">Sí, requiero espacio para vehículo</option>
+              <option value="No requiero estacionamiento">No requiero estacionamiento</option>
             </select>
           </div>
-        </div>
-      `;
-    } else if (selected === 'tinaja') {
-      dynamicFields.innerHTML = `
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1">Fecha Deseada</label>
-            <input type="date" id="res-tinaja-date" class="w-full bg-[#0D1C2D] border border-[#1E3854] rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1">Horario de Tinaja</label>
-            <select id="res-tinaja-time" class="w-full bg-[#0D1C2D] border border-[#1E3854] rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
-              <option value="Tarde (17:00 a 19:00)">Tarde (17:00 a 19:00)</option>
-              <option value="Noche bajo las estrellas (20:00 a 22:30)">Noche bajo las estrellas (20:00 a 22:30)</option>
-            </select>
-          </div>
-        </div>
-        <div class="mt-4">
-          <label class="block text-xs font-semibold text-slate-300 mb-1">¿Desea maridar con cena o tabla?</label>
-          <select id="res-tinaja-pack" class="w-full bg-[#0D1C2D] border border-[#1E3854] rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500">
-            <option value="Pack Tinaja + Tabla de Carnes o Marina + Vinos">Pack Tinaja + Tabla + Vino del Valle</option>
-            <option value="Solo uso de Tinaja Temperada">Solo uso de Tinaja Temperada</option>
-          </select>
         </div>
       `;
     }
@@ -457,22 +434,13 @@ function initReservationForm() {
         const checkin = document.getElementById('res-checkin')?.value || 'Por definir';
         const checkout = document.getElementById('res-checkout')?.value || 'Por definir';
         const room = document.getElementById('res-room-type')?.value || '';
-        const hotTub = document.getElementById('res-hot-tub')?.value || '';
+        const parking = document.getElementById('res-parking')?.value || '';
 
         message += `🛏️ *Servicio:* Hospedaje en Hostal\n`;
         message += `📥 *Check-In:* ${checkin}\n`;
         message += `📤 *Check-Out:* ${checkout}\n`;
         message += `🏨 *Habitación:* ${room}\n`;
-        message += `♨️ *Tinaja:* ${hotTub}\n`;
-      } else if (service === 'tinaja') {
-        const date = document.getElementById('res-tinaja-date')?.value || 'Por definir';
-        const time = document.getElementById('res-tinaja-time')?.value || '';
-        const pack = document.getElementById('res-tinaja-pack')?.value || '';
-
-        message += `♨️ *Servicio:* Experiencia Tinaja Caliente\n`;
-        message += `📅 *Fecha:* ${date}\n`;
-        message += `⏰ *Horario:* ${time}\n`;
-        message += `🍷 *Opción:* ${pack}\n`;
+        message += `🚗 *Estacionamiento:* ${parking}\n`;
       }
 
       if (notes) {
