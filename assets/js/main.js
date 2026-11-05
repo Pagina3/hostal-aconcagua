@@ -541,16 +541,18 @@ window.openLightbox = function(imageSrc, caption = '') {
   modalImg.src = imageSrc;
   if (modalCaption) modalCaption.textContent = caption;
 
-  modal.classList.remove('inactive');
-  modal.classList.add('active');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
   document.body.style.overflow = 'hidden';
 };
 
 window.closeLightbox = function() {
   const modal = document.getElementById('lightbox-modal');
+  const modalImg = document.getElementById('lightbox-image');
   if (!modal) return;
-  modal.classList.remove('active');
-  modal.classList.add('inactive');
+  modal.classList.remove('flex');
+  modal.classList.add('hidden');
+  if (modalImg) modalImg.src = '';
   document.body.style.overflow = '';
 };
 

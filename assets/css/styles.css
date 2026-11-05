@@ -113,6 +113,9 @@ body {
 }
 
 /* Lightbox overlay */
+#lightbox-modal.hidden {
+  display: none !important;
+}
 .lightbox-modal {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }

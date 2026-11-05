@@ -1295,13 +1295,13 @@
   </div>
 
   <!-- LIGHTBOX MODAL (FULLSCREEN PHOTO VIEWER) -->
-  <div id="lightbox-modal" class="fixed inset-0 z-50 inactive flex items-center justify-center p-4">
-    <div class="lightbox-backdrop absolute inset-0 bg-black/90 backdrop-blur-md"></div>
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/95 backdrop-blur-md">
+    <div class="lightbox-backdrop absolute inset-0 cursor-pointer"></div>
     <div class="relative z-10 max-w-4xl max-h-[90vh] flex flex-col items-center">
-      <button id="lightbox-close" class="absolute -top-12 right-0 text-white/80 hover:text-white text-2xl p-2 cursor-pointer">
+      <button id="lightbox-close" aria-label="Cerrar foto" class="absolute -top-10 sm:-top-12 right-0 text-white/90 hover:text-white text-2xl p-2 cursor-pointer z-20">
         <i class="fas fa-times"></i>
       </button>
-      <img id="lightbox-image" src="" alt="Ampliación foto" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl border border-white/10">
+      <img id="lightbox-image" src="" alt="Foto Aconcagua" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl border border-white/15">
       <div id="lightbox-caption" class="text-sm font-serif text-amber-300 mt-3 text-center px-4"></div>
     </div>
   </div>
